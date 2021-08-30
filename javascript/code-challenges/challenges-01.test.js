@@ -76,18 +76,27 @@ Use `forEach` to build a new array of strings, each string modified by the callb
 ------------------------------------------------------------------------------------------------ */
 
 const greeting = (word) => {
-  word=['hi', 'how', 'are', 'you'];
-  let newArr4=[];
-  arr.forEach(function(item) {
+  
+  let newWord=word.toUpperCase()+ '!' ;
+  
 
-    newArr3.push(`${item}!`.toUpperCase())
-
-  })
-  return(newArr3);
+  return(newWord);
 };
 
+
+
 const speaker = (words, callback) => {
-  // Solution code here...
+  
+let newArray=[];
+words.forEach(function (item) {
+
+  newArray.push(callback(item))
+  
+});
+
+return(newArray);
+
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -107,11 +116,23 @@ Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
 const addValues = (arr, value) => {
-  // Solution code here...
+  
+ arr.push(value)
+  
 };
 
 const addNumbers = (num, arr, times, callback) => {
-  // Solution code here...
+  
+
+  for (let i = 0; i < times; i++) {
+    
+    callback(arr,num)
+    
+  }
+  
+
+  
+  return (arr);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -133,7 +154,27 @@ This function should use forEach to populate your grocery list based on the stor
 ------------------------------------------------------------------------------------------------ */
 
 const createList = (availableItems) => {
-  // Solution code here...
+
+  let finalList=[];
+
+  availableItems.forEach(function (item) {
+
+    if (item.available===true) {
+
+      finalList.push(item.name)
+
+      
+    }
+    
+    
+  })
+  
+
+
+  return(finalList);
+
+
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -151,7 +192,35 @@ Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
 const fizzbuzz = (arr) => {
-  // Solution code here...
+  let fizzArray=[];
+
+  arr.forEach(function (item) {
+
+    if (item %3 ==0 && item %5 ==0) {
+      fizzArray.push('Fizz Buzz')
+      
+    }
+
+    else if (item %5 ==0) {
+
+      fizzArray.push('Buzz')
+      
+    }
+
+    else if (item %3 ==0 ) {
+
+      fizzArray.push('Fizz')
+      
+    }
+    else{
+
+      fizzArray.push(item);
+
+    }
+    
+  })
+
+  return(fizzArray);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -205,7 +274,7 @@ describe('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
+describe('Testing challenge 7', () => {
   const inputs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
 
   test('It should print out messages or numbers', () => {
