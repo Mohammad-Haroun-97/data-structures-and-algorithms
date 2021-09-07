@@ -13,8 +13,8 @@ You can assume that neither firstName nor lastName will be blank
 ------------------------------------------------------------------------------------------------ */
 const toLastNames = people => {
   // Solution code here...
-  const names = people.map(element => `${element.firstName} ${element.lastName}`)
-  return names;
+  const names = people.map(item => `${item.firstName} ${item.lastName}`)
+  return names;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -26,13 +26,13 @@ Write a function named addValues that, given an array of numbers as input, uses 
 
 const addValues = (arr) => {
   // Solution code here...
-   const summ = arr.reduce((valu1, val) => {
-       valu1=valu1+ val
-        return valu1
-      }, 0)
-    
-      return summ
-    };
+    const pushing = arr.reduce((value1, val) => {
+    value1 = value1 + val
+    return value1
+  }, 0)
+
+  return pushing
+};
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
@@ -46,19 +46,27 @@ Write a function named addPurchases that, given an array of objects as input, us
 ------------------------------------------------------------------------------------------------ */
 
 const addPurchases = (arr) => {
-  // Solution code here...
+  const totalPrice = arr.reduce((value1, val) => {
+    value1 += val.purchasePrice
+    return value1
+  }, 0)
+  return totalPrice
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
-Write a function named countNumberOfElements that, given an array as input, uses reduce to count the number of elements in the array.
+Write a function named countNumberOfitems that, given an array as input, uses reduce to count the number of items in the array.
 
 Note: You may not use the array's built-in length property.
 ------------------------------------------------------------------------------------------------ */
 
-const countNumberOfElements = (arr) => {
-  // Solution code here...
+const countNumberOfitems = (arr) => {
+  const reduced = arr.reduce((value1, val, i) => {
+    value1 = i + 1
+    return value1
+  })
+  return reduced
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -118,7 +126,12 @@ let starWarsData = [{
 }];
 
 const returnNames = (arr) => {
-  // Solution code here...
+  let allnames = [];
+  const names = arr.reduce((value1, val) => {
+
+    return allnames.push(val.name);
+  }, [])
+  return allnames
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -129,8 +142,8 @@ Write a function named reversedString that takes in a string and returns a strin
 Note: You must use reduce for this challenge. You may not use the built-in .reverse() string method.
 ------------------------------------------------------------------------------------------------ */
 
-const reversedString = (str) => {
-  // Solution code here...
+const reversedString = (item) => {
+  return item.split("").reduce((value1, val) => val + value1, '');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -184,6 +197,7 @@ const characters = [
 
 const countNumberOfChildren = (arr) => {
   // Solution code here...
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -191,7 +205,7 @@ CHALLENGE 8 - Stretch Goal
 
 Write a function that, given an array of numbers as input, uses reduce to calculate the array's average value.
 
-Hint: The accumulator should begin as { count: 0, sum: 0 }
+Hint: The value1umulator should begin as { count: 0, sum: 0 }
 ------------------------------------------------------------------------------------------------ */
 
 const calculateAverage = (arr) => {
@@ -201,7 +215,7 @@ const calculateAverage = (arr) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 9 - Stretch Goal
 
-Write a function named countPrimeNumbers that, given an array elements as input, uses reduce to count the number of elements that are prime numbers.
+Write a function named countPrimeNumbers that, given an array items as input, uses reduce to count the number of items that are prime numbers.
 
 You are welcome to use the provided isPrime function.
 ------------------------------------------------------------------------------------------------ */
@@ -265,7 +279,7 @@ const extractStat = (statName, arr) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 11 - Stretch Goal
 
-Write a function named extractChildren that, given the array of characters from challenge 4, accomplishes the following:
+Write a function named extractChildren that, given the array of characters from challenge 4, value1omplishes the following:
 
 1) Uses filter to return an array of the characters that contain the letter 'a' in their name
 
@@ -313,7 +327,7 @@ describe('Testing challenge 3', () => {
 
 describe('Testing challenge 4', () => {
   test('It should return the length of the array', () => {
-    expect(countNumberOfElements([1, 2, 3, 4, 5])).toStrictEqual(5);
+    expect(countNumberOfitems([1, 2, 3, 4, 5])).toStrictEqual(5);
   });
 });
 
