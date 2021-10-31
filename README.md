@@ -20,4 +20,16 @@ To run your tests
 
 ### 401 Data Structures, Code Challenges
 
-- Please follow the instructions specific to your 401 language, which can be found in the directory below, matching your course.
+# Reverse an Array
+Reverse an Array elements without using any built-in methods (discover a procedure to solve this manually) 
+
+## Whiteboard Process
+Simply make a function that can reverse the elements of any array by using for loop.
+that’s mean the output should come out like input but reversed
+
+
+## Approach & Efficiency
+It is not effiecient to use this method, i think built in (reverse method ) is much easier and practitcal 
+
+![](code-challenge-401-1.PNG)
+
