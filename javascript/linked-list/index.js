@@ -80,6 +80,7 @@ class LinkedList {
 
   }
 
+
   append(value) {
     const node = new Node(value);
     if (!this.head) {
@@ -135,6 +136,9 @@ class LinkedList {
   }
 
  
+
+  
+
 }  
 
 module.exports = LinkedList;
