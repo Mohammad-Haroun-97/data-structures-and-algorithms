@@ -1,4 +1,5 @@
 # Author 
 Mohammad Haroun 
 
-![](Code-Challenge-Diagram.PNG)
+* ![](binarysearchh.jpg)
+* ![](BinarySearchCodeAndTesting.PNG)
