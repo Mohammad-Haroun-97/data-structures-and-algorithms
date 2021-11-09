@@ -3,7 +3,10 @@
 - [x] remove
 - [x] to string
 - [x]  insert multiple nodes 
-- [x]  searching for a value in the linked list    
 
 
+
+
+linked-list-kth
 * ![](code-challenge07.PNG)
+

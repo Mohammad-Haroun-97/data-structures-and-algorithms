@@ -94,6 +94,34 @@ describe('Linked List', () => {
     expect(ll.toString()).toBe('{d} -> {c} -> NULL -> {false} -> {a}');
   });
 
+  it('it adds Multiple elements to the end of the list', () => {
+    const ll = new LinkedList();
+    ll.insert(1)
+    ll.insert(3)
+    ll.insert(2)
+    ll.append(5)
+    
+  })
+  it('it adds a new node before the last node', () => {
+    const ll = new LinkedList();
+    ll.insert(1)
+    ll.insert(2)
+    ll.insert(3)
+    ll.insertBefore(5,2)
+    
+  })
+  it('it adds a new node after the last node', () => {
+    const ll = new LinkedList();
+    ll.insert(1)
+    ll.insert(2)
+    ll.insert(3)
+    ll.insertAfter(5,2)
+   
+  })
+
+
+
+
 
 
 });
