@@ -6,5 +6,4 @@
 - [x]  searching for a value in the linked list    
 
 
-* ![](codeChallenge05edited11.PNG)
-* ![](codeChallenge05edited22.PNG)
+* ![](code-challenge07.PNG)
