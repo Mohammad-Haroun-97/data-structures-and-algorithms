@@ -1,17 +1,21 @@
 'use strict';
 
 class Node {
-  constructor(value, next = null) {
+  constructor(value,next) {
     this.value = value;
-    this.next = next;
+    this.next = null;
   }
 }
+
 
 class LinkedList {
   constructor() {
     this.head = null;
     this.last = null;
+    this.length = 0;
   }
+
+  
 
   insert(value) {
     try {
@@ -27,6 +31,7 @@ class LinkedList {
     } catch {
       console.log('Please enter a valid input');
     }
+    this.length++;
   }
 
   includes(value) {
@@ -81,6 +86,82 @@ class LinkedList {
   }
 
   
+  append(value) {
+    const node = new Node(value);
+    if (!this.head) {
+      this.head = node;
+      this.last = node;
+    } else {
+      let pointer = this.head;
+      while (pointer.next) {
+        pointer = pointer.next;
+      }
+      pointer.next = node;
+      this.last = node;
+    }
+    this.length++;
+  }
+
+  insertBefore(newValue, value) {
+    const node = new Node(newValue);
+    let pointer = this.head;
+
+    if (value == this.head.value) {
+      node.next = this.head;
+      this.head = node;
+    } else {
+
+      while (pointer) {
+        if (pointer.next.value == value) {
+          node.next = pointer.next;
+          pointer.next = node;
+          break;
+        }
+        pointer = pointer.next;
+      }
+    }
+  }
+
+
+  insertAfter(newValue, value) {
+    let node = new Node(newValue);
+    let pointer = this.head;
+
+    while (pointer) {
+
+      if (pointer.value == value) {
+        if(pointer.next == null){
+          this.last = node;
+        }
+        node.next = pointer.next;
+        pointer.next = node;
+        break;
+      }
+      pointer = pointer.next;
+    }
+  }
+
+ 
+  kth(num) {
+    console.log('===========',num);
+    console.log('this.length',this.length);
+    // num = Math.abs(num);
+    if (num >= this.length) return "Exception";
+    if (num === this.length - 1) return this.head.value;
+    if (num === 0) return this.tail.value;
+    let current = this.head;
+    console.log('current',current);
+
+    for (let i = 1; i < this.length - num; i++) {
+      current = current;
+    }
+    return current.value;
+  }
+
+
+
+
+ 
 }  
 
 module.exports = LinkedList;
