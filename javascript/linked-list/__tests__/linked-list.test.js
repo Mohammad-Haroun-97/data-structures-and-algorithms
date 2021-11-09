@@ -1,5 +1,15 @@
 'use strict';
   const LinkedList = require('../index');
+  let listII=new LinkedList
+
+  listII.insert(1);
+  listII.append(2);
+  listII.insert(2);
+  listII.insert(3);
+  listII.insert(4);
+  listII.insert(5);
+
+
 describe('Linked List', () => {
   it('works', () => {
     expect(true).toBeTruthy();});
@@ -54,6 +64,23 @@ describe('Linked List', () => {
     expect(ll.includes('a')).toBe(true);
     expect(ll.includes('h')).toBe(false);
   });
+
+
+  it("test the kth method - return a value", () => {
+    let index = listII.kth(3);
+    expect(index).toEqual(5);
+  });
+  it("test the kth method - return a value when num is not a positive integer", () => {
+    let index = listII.kth(-3);
+    expect(index).toEqual(5);
+  });
+  it("test the kth method - return Exception", () => {
+    let index = listII.kth(-7);
+    
+  });
+
+
+
 
   it('Test Reading All Node Values',()=>{
     let ll = new LinkedList();

@@ -6,7 +6,7 @@
 
 
 
-* ![](codeChallenge05edited11.PNG)
-* ![](codeChallenge05edited22.PNG)
 
+linked-list-kth
+* ![](code-challenge07.PNG)
 

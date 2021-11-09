@@ -1,17 +1,21 @@
 'use strict';
 
 class Node {
-  constructor(value, next = null) {
+  constructor(value,next) {
     this.value = value;
-    this.next = next;
+    this.next = null;
   }
 }
+
 
 class LinkedList {
   constructor() {
     this.head = null;
     this.last = null;
+    this.length = 0;
   }
+
+  
 
   insert(value) {
     try {
@@ -27,6 +31,7 @@ class LinkedList {
     } catch {
       console.log('Please enter a valid input');
     }
+    this.length++;
   }
 
   includes(value) {
@@ -81,6 +86,11 @@ class LinkedList {
   }
 
 
+  
+ 
+
+  
+
   append(value) {
     const node = new Node(value);
     if (!this.head) {
@@ -94,6 +104,7 @@ class LinkedList {
       pointer.next = node;
       this.last = node;
     }
+    this.length++;
   }
 
   insertBefore(newValue, value) {
@@ -136,8 +147,28 @@ class LinkedList {
   }
 
  
+  kth(num) {
+    console.log('===========',num);
+    console.log('this.length',this.length);
+    // num = Math.abs(num);
+    if (num >= this.length) return "Exception";
+    if (num === this.length - 1) return this.head.value;
+    if (num === 0) return this.tail.value;
+    let current = this.head;
+    console.log('current',current);
 
-  
+    for (let i = 1; i < this.length - num; i++) {
+      current = current;
+    }
+    return current.value;
+  }
+
+
+
+
+ 
+
+
 
 }  
 
