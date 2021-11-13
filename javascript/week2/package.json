@@ -1,0 +1,16 @@
+{
+  "name": "week2",
+  "version": "1.0.0",
+  "description": "* ![](VC-CODE10.PNG) * ![](WHITRBOARD-code10.jpeg) * ![](whitr-2.jpeg)",
+  "main": "---test--.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^27.3.1",
+    "supertest": "^6.1.6"
+  }
+}
