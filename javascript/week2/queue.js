@@ -45,5 +45,16 @@ class Queue {
     return this.length === 0;
   }
 }
+const queueTest=new Queue()
+
+
+queueTest.enqueue(1)
+queueTest.enqueue(2)
+queueTest.enqueue(3)
+// console.log(queueTest.front);
+
+queueTest.dequeue()
+
+console.log(queueTest.front);
 
 module.exports = Queue;
