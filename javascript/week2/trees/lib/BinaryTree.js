@@ -10,12 +10,14 @@ class BinaryTree{
     let output=[];
 
     function traverse(node) {
+      
       output.push(node.value)
 
       if (node.left) traverse(node.left)  
       if (node.right) traverse(node.right)  
 
     }
+
     traverse(this.root);
 
     return output
