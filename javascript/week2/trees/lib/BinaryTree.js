@@ -58,12 +58,38 @@ class BinaryTree{
     return output
   }
 
+  breadthFirstSearch(tree) {
+    if (!this.root) {
+      return "empty";
+    }
+    let queue = [tree];
+    let result = [];
+    while (queue.length > 0) {
+      let item = queue.shift();
+      let value = item.value;
+      console.log(value);
+      result.push(value);
+      if (item.left == null && item.right == null) {
+        continue;
+      }
+      if (item.left != null) {
+        queue.push(item.left);
+      }
+
+      if (item.right != null) {
+        queue.push(item.right);
+      }
+    }
+    return result;
+  }
+}
+
+
  
 
 
 
 
-}
 
 
 module.exports=BinaryTree
