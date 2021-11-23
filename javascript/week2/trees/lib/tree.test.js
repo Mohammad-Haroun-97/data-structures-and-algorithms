@@ -2,6 +2,7 @@
 const BinarySearchTree=require('./binarySearchTree')
 const BinaryTree=require('./BinaryTree')
 const Node = require('./Node')
+const fizzBuzz=require('./fizzBuzz')
 
 
 it('Can successfully instantiate an empty BSt', () => {
@@ -100,8 +101,30 @@ it('Can successfully push onto a bst', () => {
     bst.adding(42)
     bst.adding(85)
     bst.adding(105)
+
     expect(bst.getMaximum()).toBe(105)
   });
+
+
+    
+      it("Can successfully return the list in the right order", () => {
+        const bt=new BinaryTree()
+
+
+bt.root=new Node( 1 , new Node( 2, new Node(3),new Node(4)),   new Node( 5, new Node(7),new Node(15)))
+        expect(fizzBuzz(bt.root)).toEqual([ '1',    '2',
+        'Buzz', '5',
+        'Fizz', '3',
+        '4',    '7',
+        'Buzz', 'FizzBuzz']);
+     
+     
+    });
+
+
+
+
+
   
 
 

@@ -58,25 +58,28 @@ class BinaryTree{
     return output
   }
 
-  breadthFirstSearch(tree) {
+  breadthFirstSearch() {
     if (!this.root) {
       return "empty";
     }
-    let queue = [tree];
+    let queue = [this.root];
+    
+    console.log('queue',queue);
+    
+
     let result = [];
     while (queue.length > 0) {
       let item = queue.shift();
+      console.log('item',item);
       let value = item.value;
       console.log(value);
       result.push(value);
-      if (item.left == null && item.right == null) {
-        continue;
-      }
-      if (item.left != null) {
+    
+      if (item.left ) {
         queue.push(item.left);
       }
 
-      if (item.right != null) {
+      if (item.right ) {
         queue.push(item.right);
       }
     }
