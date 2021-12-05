@@ -25,7 +25,7 @@ class BinarySearchTree extends BinaryTree {
         } else {
           node.left = newNode;
         }
-      } else {
+      }  if (value > node.value) {
         if (node.right) {
           recursionAdding(node.right);
         } else {
@@ -87,6 +87,9 @@ isEmpty(){
   return this.root===null 
     
 }
+
+
+
 
 }
 
