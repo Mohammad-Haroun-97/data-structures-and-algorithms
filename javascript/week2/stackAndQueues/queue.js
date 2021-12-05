@@ -1,4 +1,5 @@
 const Node = require("./Node");
+const Stack=require('./stack')
 
 class Queue {
   constructor() {
@@ -44,7 +45,19 @@ class Queue {
   isEmpty() {
     return this.length === 0;
   }
+
 }
+
+
+
+
+
+
+
+
+
+
+
 const queueTest=new Queue()
 
 

@@ -11,15 +11,22 @@ const graphiz=require('./lib/graphiz')
 
 
 const bt=new BinaryTree()
+const bt2=new BinaryTree()
 
 
 bt.root=new Node( 1 , new Node( 2, new Node(3),new Node(4)),   new Node( 5, new Node(7),new Node(15)))
 
+// bt.root=new Node( 'file' , new Node( "2", new Node("folder"),new Node("folder")),   new Node( "5", new Node('folder'),new Node("15")))
+
+// bt2.root=new Node( 'folder' , new Node( "Folder", new Node("5"),new Node("4")),   new Node( "5", new Node('folder'),new Node("15")))
+
+console.log(bt.sumOdd());
 const BST=new BinarySearchTree()
 
 
 
-// console.log(bt.postOrder());
+// console.log(bt.comparingFiles(bt2));
+
 // console.log(bt.inOrder());
 // console.log(bt.preOrder());
 
@@ -35,7 +42,7 @@ const BST=new BinarySearchTree()
 // console.log(BST.root.left.right.left.right);
 // console.log(bt.fizzBuzz()); 
 
-console.log('ffffffffffffffffff',fizzBuzz(bt.root)); 
+// console.log('ffffffffffffffffff',fizzBuzz(bt.root)); 
 
 // console.log(BST.contain(12));
 // console.log(BST.contain(4));
