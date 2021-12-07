@@ -1,0 +1,15 @@
+{
+  "name": "quicksort",
+  "version": "1.0.0",
+  "description": "Sorting refers to arranging items of a list in a specific order",
+  "main": "quick.test.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^27.4.3"
+  }
+}
