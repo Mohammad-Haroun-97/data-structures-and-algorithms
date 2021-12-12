@@ -4,10 +4,11 @@ const Stack  = require('./stack')
 
 function Brackets(str) {
     let stack = new Stack()
-    let arr = str.split('')
+    let arr = str.split('')//[(,)]
     let openBrackets = ['(', '[', '{']
     let closeBrackets = [')', ']', '}']
-    let openBracket = ''
+
+    let openBracket = '' // ( )
     let closeBracket = ''
     let result = true
     for (let i = 0; i < arr.length; i++) {
@@ -16,7 +17,7 @@ function Brackets(str) {
       }
       if (closeBrackets.includes(arr[i])) {
         openBracket = stack.pop()
-        closeBracket = arr[i]
+        closeBracket = arr[i] 
         if (openBracket === '(' && closeBracket !== ')') {
           result = false
         }
@@ -31,7 +32,7 @@ function Brackets(str) {
     }
     return result
 }
-console.log('Mohammad Haroun test ==> trial1: {()} ==>',Brackets( '{()}'));
+console.log('Mohammad Haroun test ==> trial1: {()} ==>',Brackets( '(){}'));
 
 
 module.exports = Brackets

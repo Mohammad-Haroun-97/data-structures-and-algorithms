@@ -1,3 +1,4 @@
+// Mohammad Haroun
 function mergeSort(arr){
     const n = arr.length;
   
@@ -10,7 +11,7 @@ function mergeSort(arr){
       return arr;
     }
   }
-  
+  // Mohammad Haroun
   function merge(left, right){
     let i = 0;
     let j = 0;
