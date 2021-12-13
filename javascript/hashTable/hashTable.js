@@ -101,6 +101,11 @@ class HashTable {
     }
 }
 
+module.exports=HashTable
+
+
+
+
 const hashTable = new HashTable();
 
 hashTable.add('John', 'Boss');
