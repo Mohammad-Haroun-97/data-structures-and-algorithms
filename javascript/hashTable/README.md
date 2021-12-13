@@ -1,17 +1,13 @@
+
 # Challenge Summary
 
-create a hashtable data structue with a get/contains/add/hash functions
+Write a function called repeated word that finds the first word to occur more than once in a string
 
 ## Whiteboard Process
 
-![img](Inkedcc30_LI.jpg)
+![img](cc31.png)
 
 ## Approach & Efficiency
 
-create a hashTable class and method for each function
-big(O) for space
-get/contains-O(1)
-add-O(1)
-big(O) for time
-get/contains-O(n)
-add-O(1)
+parameter: string
+Return: string
